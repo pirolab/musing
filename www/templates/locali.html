@@ -1,5 +1,10 @@
 <ion-view view-title="Locali">
   <ion-content>
     <h1>Locali</h1>
+	<ion-list>
+      <ion-item ng-repeat="locale in locali" href="#/app/locali/{{locale.id}}">
+        {{locale.title}}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

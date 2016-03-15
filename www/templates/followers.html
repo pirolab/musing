@@ -1,5 +1,10 @@
 <ion-view view-title="Followers">
   <ion-content>
     <h1>Followers</h1>
+	<ion-list>
+      <ion-item ng-repeat="follower in followers" href="#/app/followers/{{follower.id}}">
+        {{follower.title}}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

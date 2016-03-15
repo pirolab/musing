@@ -59,6 +59,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+	.state('app.concerto', {
+    url: '/concerti/:concertoId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/concerto.html',
+        controller: 'ConcertoCtrl'
+      }
+     }
+    })
 	.state('app.locali', {
       url: '/locali',
       views: {
@@ -68,6 +77,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+	.state('app.locale', {
+    url: '/locali/:localeId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/locale.html',
+        controller: 'LocaleCtrl'
+      }
+     }
+    })
 	.state('app.followers', {
       url: '/followers',
       views: {
@@ -76,6 +94,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 		  controller: 'FollowersCtrl'
         }
       }
+    })
+	.state('app.follower', {
+    url: '/followers/:followerId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/follower.html',
+        controller: 'FollowerCtrl'
+      }
+     }
     })
     .state('app.musicisti', {
       url: '/musicisti',
@@ -87,7 +114,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-  .state('app.single', {
+  .state('app.musicista', {
     url: '/musicisti/:musicistaId',
     views: {
       'menuContent': {

@@ -1,5 +1,10 @@
 <ion-view view-title="Concerti">
   <ion-content>
     <h1>Concerti</h1>
+	<ion-list>
+      <ion-item ng-repeat="concerto in concerti" href="#/app/concerti/{{concerto.id}}">
+        {{concerto.title}}
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
