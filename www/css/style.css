@@ -18,3 +18,16 @@
 }
 
 ion-card {margin: 0;}
+
+.musing_items,
+.musing_items .item{
+	margin:0;
+	padding:0;
+}
+.musing_items .card{
+	margin:5px;
+}
+.musing_items .card a{
+	display:block;
+	padding:10px;
+}
