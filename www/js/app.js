@@ -22,7 +22,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($ionicConfigProvider, $stateProvider, $urlRouterProvider) {
+ $ionicConfigProvider.backButton.previousTitleText(false).text(' ');
+ $ionicConfigProvider.navBar.alignTitle('left')
   $stateProvider
 
     .state('app', {
