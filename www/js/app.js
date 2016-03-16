@@ -40,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+  
+  .state('app.profilo', {
+    url: '/profilo',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/profilo.html',
+		controller: 'ProfiloCtrl'
+      }
+    }
+  })
 
   .state('app.search', {
     url: '/search',
