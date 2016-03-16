@@ -127,4 +127,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/concerti');
-});
+})
+.directive('dragBack', function($ionicGesture, $state) {
+  return {
+    restrict : 'EAC',
+    link : function(scope, elem, attr) {
+      $ionicGesture.on('swiperight', function(event) {
+        event.preventDefault();
+        window.history.back();
+      }, elem);
+      
+    }
+  }  
+})
