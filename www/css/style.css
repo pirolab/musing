@@ -1,1 +1,33 @@
 /* Empty. Add your own CSS if you like */
+
+
+.bar.bar-stable {
+    border-color: transparent;
+    background-color: #000;
+	background-image:none; 
+    color: #FFF;
+}
+.menu .bar-header {
+    z-index: 11;
+	background-color: #222;
+}
+.bar.bar-stable .title,
+.bar-stable .button.button-clear {color: #FFF; font-size:16px; text-transform:uppercase;}
+.row{
+  flex-wrap: wrap;
+}
+
+ion-card {margin: 0;}
+
+.musing_items,
+.musing_items .item{
+	margin:0;
+	padding:0;
+}
+.musing_items .card{
+	margin:5px;
+}
+.musing_items .card a{
+	display:block;
+	padding:10px;
+}
