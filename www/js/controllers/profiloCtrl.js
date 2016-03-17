@@ -1,4 +1,5 @@
 controllersmodule.controller('ProfiloCtrl', function($scope, User) {
+
 	$scope.gettest = function(){
 		return User.gettest();
 	}
