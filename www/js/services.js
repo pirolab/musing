@@ -30,7 +30,8 @@ angular.module('starter.services', [])
 				content += resp.data.account.isPasswordOk+'<br />';
 				content += resp.data.account.uid+'<br />';
 				content += resp.data.account.email+'<br />';
-				content += '<img src="'+resp.data.account.image+'" /><br />';
+				content += resp.data.account.roles[6]+'<br />';
+				content += resp.data.account.image+'<br />';
 			document.querySelector('.data').innerHTML = content;
 		  }, function(err) {
 			console.error('ERR', err);
