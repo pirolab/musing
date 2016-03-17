@@ -241,7 +241,7 @@ var MD5 = function (string) {
 				content += '<img src="'+resp.data.account.image+'" /><br />';
 				document.querySelector('.data').innerHTML = content;
 			} else {
-				document.querySelector('.data').innerHTML = 'Password sbaglita';
+				document.querySelector('.data').innerHTML = 'Password sbagliata';
 			}
 		  }, function(err) {
 			console.error('ERR', err);
