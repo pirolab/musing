@@ -24,7 +24,7 @@ controllersmodule.controller('ConcertiCtrl', function($scope, User) {
 	},
 	{ 
 	title: 'Defrag', 
-	id: 1 ,
+	id: 3 ,
 	dataEvento:'03\/05\/2016',
 	oraEvento:'22:00',
 	image:'img/defrag.jpg',
@@ -35,7 +35,7 @@ controllersmodule.controller('ConcertiCtrl', function($scope, User) {
 	},
 	{ 
 	title: 'Le Mura', 
-	id: 2 ,
+	id: 4 ,
 	dataEvento:'03\/05\/2016',
 	oraEvento:'22:00',
 	image:'img/le_mura.jpg',
