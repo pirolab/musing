@@ -3,10 +3,22 @@
     <h1>Concerti</h1>
     <div class="row">
       <div class="col col-50 musing_items" ng-repeat="concerto in concerti">
-        <div class="card">
-          <div class="item item-text-wrap">
-			<a href="#/app/concerti/{{concerto.id}}">{{concerto.title}}</a>
-          </div>
+        <div class="musing_card">
+			
+			<a href="#/app/concerti/{{concerto.id}}"> 
+            	<div class="data"  ng-bind-html="concerto.data">{{concerto.data}}</div>
+                <img ng-src="{{concerto.image}}" />
+                <div class="musing_body">
+                    <h3>{{concerto.title}}<span class="block_span_small secondary_label">{{concerto.city}}</span></h3>
+                    <div class="primary_label">Concerto <span class="secondary_label bold">{{concerto.typeOfevento}}</span></div>
+                    <div class="primary_label">Biglietto <span class="secondary_label bold">{{concerto.costo}}</span></div>
+                </div>
+                <div class="promozione musing_footer">
+                    <span class="block_span bold">Promozione</span>
+                    Termina il 24/09/2016
+                </div>
+           </a>
+
         </div>
       	
        </div>

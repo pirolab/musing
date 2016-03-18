@@ -16,6 +16,7 @@ angular.module('starter.services', [])
 
 	var loadershow = function() {
 		$ionicLoading.show({
+			noBackdrop: false,
 		  template: '<p class="item-icon-left">Aspetta.. sto caricando!!<ion-spinner icon="lines"/></p>'
 		});
 	  };
@@ -28,7 +29,7 @@ angular.module('starter.services', [])
 		loadershow();
 		var user = {
 			name: 'pirolab',
-			pass: 'samah_20'
+			pass: 'samah_2012'
 		};
 
 		$http({
