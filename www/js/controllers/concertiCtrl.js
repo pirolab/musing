@@ -1,40 +1,48 @@
 controllersmodule.controller('ConcertiCtrl', function($scope, User) {
 	$scope.concerti = [
     { 
-	title: 'Le Mura', 
+	title: 'Defrag', 
 	id: 1 ,
-	data:'<span class="block_span_big">28</span> Agosto 2016',
-	image:'img/le_mura.jpg',
+	dataEvento:'03\/05\/2016',
+	oraEvento:'22:00',
+	image:'img/defrag.jpg',
 	city:'Roma',
 	typeOfevento:'Rock',
-	costo:'3€'
+	costo:'3€',
+	fase:'promozione'
 	},
-	    { 
+	{ 
 	title: 'Le Mura', 
 	id: 2 ,
-	data:'<span class="block_span_big">28</span> Agosto 2016',
+	dataEvento:'03\/05\/2016',
+	oraEvento:'22:00',
 	image:'img/le_mura.jpg',
 	city:'Roma',
 	typeOfevento:'Rock',
-	costo:'3€'
+	costo:'3€',
+	fase:'scelta'
 	},
-	    { 
-	title: 'Le Mura', 
-	id: 3 ,
-	data:'<span class="block_span_big">28</span> Agosto 2016',
-	image:'img/le_mura.jpg',
+	{ 
+	title: 'Defrag', 
+	id: 1 ,
+	dataEvento:'03\/05\/2016',
+	oraEvento:'22:00',
+	image:'img/defrag.jpg',
 	city:'Roma',
 	typeOfevento:'Rock',
-	costo:'3€'
+	costo:'3€',
+	fase:'ingaggio'
 	},
-	    { 
+	{ 
 	title: 'Le Mura', 
-	id: 4 ,
-	data:'<span class="block_span_big">28</span> Agosto 2016',
+	id: 2 ,
+	dataEvento:'03\/05\/2016',
+	oraEvento:'22:00',
 	image:'img/le_mura.jpg',
 	city:'Roma',
 	typeOfevento:'Rock',
-	costo:'3€'
+	costo:'3€',
+	fase:'candidatura'
 	},
   ];
 });

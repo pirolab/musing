@@ -47,9 +47,9 @@ angular.module('starter.services', [])
 				content += resp.data.account.roles[6]+'<br />';
 				content += resp.data.account.secret+'<br />';
 				content += '<img src="'+resp.data.account.image+'" /><br />';
-				document.querySelector('.data').innerHTML = content;
+				document.querySelector('.output').innerHTML = content;
 			} else {
-				document.querySelector('.data').innerHTML = 'Password sbagliata';
+				document.querySelector('.output').innerHTML = 'Password sbagliata';
 			}
 			loaderhide();
 		  }, function(err) {

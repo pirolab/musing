@@ -1,47 +1,32 @@
 /* Empty. Add your own CSS if you like */
 
 
-.bar.bar-stable {
-    border-color: transparent;
-    background-color: #000;
-	background-image:none; 
-    color: #FFF;
-}
-.menu .bar-header {
-    z-index: 11;
-	background-color: #222;
-}
+.bar.bar-stable {border-color: transparent;background-color: #000;background-image:none; color: #FFF;}
+.menu .bar-header {z-index: 11;background-color: #222;}
 .bar.bar-stable .title,
 .bar-stable .button.button-clear {color: #FFF; font-size:16px; text-transform:uppercase;}
-.row{
-  flex-wrap: wrap;
-}
-.item-icon-left ion-spinner {
-  float: left;
-  margin-left: -3.2em;
-  margin-right: 1em;
-  margin-top: -0.2em;
- }
+.row{flex-wrap: wrap;}
 
-.spinner svg {
-  width: 28px;
-  height: 28px;
-  stroke: #fff;
-  fill: #fff;
-}
+.item-icon-left ion-spinner {float: left;margin-left: -3.2em;margin-right: 1em;margin-top: -0.2em; }
+.spinner svg {width: 28px;height: 28px;stroke: #fff;fill: #fff;}
 
 .block_span,
 .block_span_big,
 .block_span_small{width:100%;display:block;font-size:14px;}
 .block_span_big{font-size:28px;}
-.block_span_small{font-size:14px;}
+.block_span_small{font-size:12px;}
 .bold{ font-weight:700;}
-.primary_label{ color:black; text-transform:capitalize;}
-.secondary_label{color:#767676;}
+.uppercase{text-transform:uppercase;}
+.capitalize{text-transform:capitalize;}
+.grey_label{ color:#767676;}
+.dark_label{color:black;}
+
+
+/*  stile grid 2 colonne */
+
 .musing_body,
 .musing_footer{ display:block; padding:5px 10px;}
 
-/*  stile grid 2 colonne */
 .musing_items{
 	margin:0;
 	padding:0;
@@ -61,7 +46,7 @@
 .musing_items .musing_card{
 	margin:3%;
 	width:94%;
-	background:#cecece;
+	background:#ddd;
 	position:relative;
 }
 .musing_items .musing_card a{
@@ -79,6 +64,8 @@
 	color:white;
 	font-size:14px;
 }
+
+.musing_items .musing_card .data .block_span_big{font-size:18px;}
 .musing_items .musing_card img{
 	width:100%;
 	height:auto;
@@ -86,7 +73,7 @@
 	padding:0;
 }
 .musing_items .musing_card h3{
-	font-size:18px;
+	font-size:16px;
 	line-height:18px;
 	text-transform:uppercase;
 }
@@ -95,12 +82,15 @@
 /* fasi evento*/
 .candidatura{
 	background-color:#3e6493;
+	color:white;
 }
 .scelta{
 	background-color:#3fa035;
+	color:white;
 }
 .ingaggio{
 	background-color:#951d1c;
+	color:white;
 }
 .promozione{
 	background-color:#ff9a00;
