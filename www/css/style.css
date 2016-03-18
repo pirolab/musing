@@ -82,10 +82,14 @@
 .musing_items .musing_card img{
 	width:100%;
 	height:auto;
-	margin: 0 0 -5px 0;
+	margin: 0;
 	padding:0;
 }
-
+.musing_items .musing_card h3{
+	font-size:18px;
+	line-height:18px;
+	text-transform:uppercase;
+}
 
 
 /* fasi evento*/
