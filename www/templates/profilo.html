@@ -3,6 +3,15 @@
     <h1>Profilo</h1>
 	<button ng-click="gettest()">Get call test</button>
 	<button ng-click="posttest()">Post call test</button>
-    <div class="output"></div>
+
+    <div class="output">
+	{{userinfo.account.name}}<br />
+	{{userinfo.account.uid}}<br />
+	{{userinfo.account.email}}<br />
+	{{userinfo.account.roles[6]}}<br />
+	{{userinfo.account.secret}}<br />
+	<img src="{{userinfo.account.image}}" /><br />
+	</div>
+
   </ion-content>
 </ion-view>

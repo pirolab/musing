@@ -20,11 +20,11 @@ angular.module('starter.services', [])
 		  template: '<p class="item-icon-left">Aspetta.. sto caricando!!<ion-spinner icon="lines"/></p>'
 		});
 	  };
+	  
 	var loaderhide = function(){
 		$ionicLoading.hide();
 	  };
-
-	//Let's test a post http call
+	
 	var posttest = function(){
 		loadershow();
 		var user = {
@@ -32,31 +32,14 @@ angular.module('starter.services', [])
 			pass: 'samah_2012'
 		};
 
-		$http({
+		var promise = $http({
 			method: 'POST',
 			url: 'http://www.musingshow.com/it/api/rest/get/userInfo/json?name='+user.name+'&pass='+user.pass,
 			headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-		}).then(function(resp) {
-			var content ='';
-			if(resp.data.account.isPasswordOk === true){
-				console.log('Success', resp.data.account);
-				content += resp.data.account.name+'<br />';
-				content += resp.data.account.isPasswordOk+'<br />';
-				content += resp.data.account.uid+'<br />';
-				content += resp.data.account.email+'<br />';
-				content += resp.data.account.roles[6]+'<br />';
-				content += resp.data.account.secret+'<br />';
-				content += '<img src="'+resp.data.account.image+'" /><br />';
-				document.querySelector('.output').innerHTML = content;
-			} else {
-				document.querySelector('.output').innerHTML = 'Password sbagliata';
-			}
-			loaderhide();
-		  }, function(err) {
-			console.error('ERR', err);
-			// err.status will contain the status code
 		});
+		return promise;
 	}
+	
 	/* Altro Approccio usando Object in POST e sembra funzionare */
 //	var posttest = function(){
 //		data_obj = { email: 'diegovalobra@gmail.com',password:'bella_zio' };        
@@ -118,8 +101,11 @@ angular.module('starter.services', [])
 			gettest();
 		},
 		posttest: function() {
-			posttest();
-		}
+			return posttest();
+		},
+		loaderhide: function() {
+			return loaderhide();
+		},
 	};
 
 });
