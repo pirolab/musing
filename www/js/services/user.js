@@ -1,6 +1,4 @@
-angular.module('starter.services', [])
-
-.factory('User', function($http ,  $ionicLoading) {
+servicesmodule.factory('User', function($http ,  Loader) {
 
 	//Let's test a get http call
 	var gettest = function(){
@@ -12,21 +10,9 @@ angular.module('starter.services', [])
 			// err.status will contain the status code
 		});
 	}
-
-
-	var loadershow = function() {
-		$ionicLoading.show({
-			noBackdrop: false,
-		  template: '<p class="item-icon-left">Aspetta.. sto caricando!!<ion-spinner icon="lines"/></p>'
-		});
-	  };
-	  
-	var loaderhide = function(){
-		$ionicLoading.hide();
-	  };
 	
 	var posttest = function(){
-		loadershow();
+		Loader.loadershow();
 		var user = {
 			name: 'pirolab',
 			pass: 'samah_2012'
@@ -102,10 +88,7 @@ angular.module('starter.services', [])
 		},
 		posttest: function() {
 			return posttest();
-		},
-		loaderhide: function() {
-			return loaderhide();
-		},
+		}
 	};
 
 });

@@ -1,11 +1,11 @@
-controllersmodule.controller('ProfiloCtrl', function($scope, User) {
+controllersmodule.controller('ProfiloCtrl', function($scope, User, Loader) {
 	$scope.userinfo = {};
 	$scope.gettest = function(){
 		return User.gettest();
 	}
 	$scope.posttest = function(){		
 		User.posttest().then(function (response) {
-			User.loaderhide();
+			Loader.loaderhide();
 			console.log('resp', response);
 			if(response.data.account.isPasswordOk === true){
 		      $scope.userinfo = response.data;
