@@ -1,7 +1,7 @@
 controllersmodule.controller('MusicistiCtrl', function($scope, User) {
 
   $scope.$on('$ionicView.enter', function(e) {
-	$scope.userinfo = User.userinfo();
+	$scope.userinfo = User.userdata;
   });
 
 

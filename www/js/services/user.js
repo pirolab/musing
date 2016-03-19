@@ -1,5 +1,5 @@
 servicesmodule.factory('User', function($http ,  Loader) {
-
+	
 	//Let's test a get http call
 	var gettest = function(){
 		$http.get('http://www.musingshow.com/it/api/rest/test').then(function(resp) {
@@ -11,7 +11,7 @@ servicesmodule.factory('User', function($http ,  Loader) {
 		});
 	}
 	
-	var posttest = function(){
+	var login = function(logindata){
 		Loader.loadershow();
 		var user = {
 			name: 'pirolab',
@@ -62,11 +62,6 @@ servicesmodule.factory('User', function($http ,  Loader) {
 		usertype = '';
 		user = '';
 	}
-	
-	var login = function(logindata) {
-		user = logindata.username;
-		usertype = 'follower';
-	}
 
 	return {
 		userinfo: function() {
@@ -79,16 +74,13 @@ servicesmodule.factory('User', function($http ,  Loader) {
 			logout();
 			return user;
 		},
-		login: function(userdata) {
-			login(userdata);
-			return user;
-		},
 		gettest: function() {
 			gettest();
 		},
-		posttest: function() {
-			return posttest();
-		}
+		login: function(logindata) {
+			return login(logindata);
+		},
+		userdata: ''
 	};
 
 });
