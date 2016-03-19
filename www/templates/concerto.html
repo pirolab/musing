@@ -1,7 +1,18 @@
 <ion-view view-title="Concerto {{id}}" drag-back>
   <ion-content>
   <h1>Concerto {{id}}</h1>
-	<div ng-include src="'templates/infobox.html'"></div>
+	<div ng-if="fase == 1">
+		<div ng-include src="'templates/concerto-candidatura.html'" ng-controller="CandidaturaCtrl" ng-init="id = id"></div>
+	</div>
+	<div ng-if="fase == 2">
+		<div ng-include src="'templates/concerto-votazione.html'" ng-controller="VotazioneCtrl" ng-init="id = id"></div>
+	</div>
+	<div ng-if="fase == 3">
+		<div ng-include src="'templates/concerto-ingaggio.html'" ng-controller="IngaggioCtrl" ng-init="id = id"></div>
+	</div>
+	<div ng-if="fase == 4">
+		<div ng-include src="'templates/concerto-promozione.html'" ng-controller="PromozioneCtrl" ng-init="id = id"></div>
+	</div>
     
   </ion-content>
 </ion-view>
