@@ -1,6 +1,6 @@
 /* Empty. Add your own CSS if you like */
 
-
+.scroll-bar-v {right: 2px;}
 .bar.bar-stable {border-color: transparent;background-color: #000;background-image:none; color: #FFF;}
 .menu .bar-header {z-index: 11;background-color: #222;}
 .bar.bar-stable .title,
@@ -44,8 +44,8 @@
 	padding:0;
 }
 .musing_items .musing_card{
-	margin:3%;
-	width:94%;
+	margin:2%;
+	width:96%;
 	background:#ddd;
 	position:relative;
 }
