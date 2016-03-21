@@ -8,6 +8,7 @@
 .musing_row {margin-bottom:10px;}
 
 .item-icon-left ion-spinner {float: left;margin-left: -3.2em;margin-right: 1em;margin-top: -0.2em; }
+.spinner svg, 
 .spinner-royal svg {width: 28px;height: 28px;stroke: #fff;fill: #fff;}
 
 .block_span,

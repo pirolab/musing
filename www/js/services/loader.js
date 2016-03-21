@@ -1,10 +1,18 @@
 servicesmodule.factory('Loader', function($http ,  $ionicLoading) {
+	
 
 	var loadershow = function() {
-		$ionicLoading.show({
-			noBackdrop: false,
-		  template: '<p class="item-icon-left">Un attimo!!<ion-spinner icon="android" class="spinner-royal"></ion-spinner></p>'
-		});
+		if(currentPlatform === 'android'){
+			$ionicLoading.show({
+				noBackdrop: false,
+			  template: '<p class="item-icon-left">Un attimo!!<ion-spinner icon="android" class="spinner-royal"></ion-spinner></p>'
+			});
+		} else if(currentPlatform === 'ios'){
+			$ionicLoading.show({
+				noBackdrop: false,
+			  template: '<p class="item-icon-left">Un attimo!!<ion-spinner icon="lines"></ion-spinner></p>'
+			});
+		}
 	  };
 	  
 	var loaderhide = function(){
