@@ -5,10 +5,10 @@
 .menu .bar-header {z-index: 11;background-color: #222;}
 .bar.bar-stable .title,
 .bar-stable .button.button-clear {color: #FFF; font-size:16px; text-transform:uppercase;}
-.row{flex-wrap: wrap;}
+.musing_row {margin-bottom:10px;}
 
 .item-icon-left ion-spinner {float: left;margin-left: -3.2em;margin-right: 1em;margin-top: -0.2em; }
-.spinner svg {width: 28px;height: 28px;stroke: #fff;fill: #fff;}
+.spinner-royal svg {width: 28px;height: 28px;stroke: #fff;fill: #fff;}
 
 .block_span,
 .block_span_big,

@@ -1,38 +1,50 @@
 <ion-view view-title="Concerti">
   <ion-content>
     <h1>Concerti</h1>
-    <div class="row">
-      <div class="col col-50 musing_items" ng-repeat="concerto in concerti">
-        <div class="musing_card">
-			
-			<a href="#/app/concerti/{{concerto.id}}"> 
-            	<div class="data">
-                <span class="block_span_big">{{concerto.dataEvento}}</span>
-                {{concerto.oraEvento}}
-                </div>
-                <img ng-src="{{concerto.image}}" />
-                <div class="musing_body">
-                    <h3>{{concerto.title}}<span class="block_span_small grey_label">{{concerto.city}}</span></h3>
-                    <div class="grey_label">Concerto <span class="dark_label bold ">{{concerto.typeOfevento}}</span></div>
-                    <div class="grey_label">Biglietto <span class="dark_label bold">{{concerto.costo}}</span></div>
-                </div>
-                <div class="{{concerto.fase}} musing_footer">
-                    <span class="block_span bold capitalize">{{concerto.fase}}</span>
-                    Termina il 24/09/2016
-                </div>
-           </a>
-
+    
+    <div class="row musing_row" ng-repeat="concerto in concerti" ng-if="$index % 2 === 0">
+          <div class="col col-50  musing_items" ng-if="$index < concerti.length">
+            <div class="musing_card">
+                <a href="#/app/concerti/{{concerti[$index].id}}"> 
+                    <div class="data">
+                    <span class="block_span_big">{{concerti[$index].dataEvento}}</span>
+                    {{concerti[$index].oraEvento}}
+                    </div>
+                    <img ng-src="{{concerti[$index].image}}" />
+                    <div class="musing_body">
+                        <h3>{{concerti[$index].title}}<span class="block_span_small grey_label">{{concerti[$index].city}}</span></h3>
+                        <div class="grey_label">Concerto <span class="dark_label bold uppercase">{{concerti[$index].typeOfevento}}</span></div>
+                        <div class="grey_label">Biglietto <span class="dark_label bold">{{concerti[$index].costo}}</span></div>
+                    </div>
+                    <div class="{{concerti[$index].fase}} musing_footer">
+                        <span class="block_span bold capitalize">{{concerti[$index].fase}}</span>
+                        Termina il 24/09/2016
+                    </div>
+                </a>
+			</div>
+		</div>
+		<div class="col col-50  musing_items" ng-if="$index + 1 < concerti.length">
+			<div class="musing_card">
+                <a href="#/app/concerti/{{concerti[$index + 1].id}}"> 
+                    <div class="data">
+                    <span class="block_span_big">{{concerti[$index + 1].dataEvento}}</span>
+                    {{concerti[$index + 1].oraEvento}}
+                    </div>
+                    <img ng-src="{{concerti[$index + 1].image}}" />
+                    <div class="musing_body">
+                        <h3>{{concerti[$index + 1].title}}<span class="block_span_small grey_label">{{concerti[$index + 1].city}}</span></h3>
+                        <div class="grey_label">Concerto <span class="dark_label bold uppercase">{{concerti[$index + 1].typeOfevento}}</span></div>
+                        <div class="grey_label">Biglietto <span class="dark_label bold">{{concerti[$index + 1].costo}}</span></div>
+                    </div>
+                    <div class="{{concerti[$index + 1].fase}} musing_footer">
+                        <span class="block_span bold capitalize">{{concerti[$index + 1].fase}}</span>
+                        Termina il 24/09/2016
+                    </div>
+               </a>
+            </div>
         </div>
-      	
-       </div>
-    </div>
+        
+	</div>
 
-	<!--
-	<ion-list>
-      <ion-item ng-repeat="concerto in concerti" href="#/app/concerti/{{concerto.id}}">
-        {{concerto.title}}
-      </ion-item>
-    </ion-list>
-    -->
   </ion-content>
 </ion-view>
