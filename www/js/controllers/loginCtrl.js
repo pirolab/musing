@@ -1,4 +1,4 @@
-controllersmodule.controller('AppCtrl', function($scope, $timeout, User, Loader) {
+controllersmodule.controller('loginCtrl', function($scope, $timeout, $ionicSideMenuDelegate, $state, User, Loader) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -6,8 +6,13 @@ controllersmodule.controller('AppCtrl', function($scope, $timeout, User, Loader)
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
+  $ionicSideMenuDelegate.canDragContent(false);
+  
+  $scope.$on('$ionicView.leave', function () { 
+	$ionicSideMenuDelegate.canDragContent(true);
+  });
+  
   $scope.userinfo = User.userdata;
-
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -20,6 +25,7 @@ controllersmodule.controller('AppCtrl', function($scope, $timeout, User, Loader)
 		      //$scope.userinfo = response.data;
 			  User.userdata = response.data;
 			  $scope.userinfo = User.userdata;
+			  $state.go('app.concerti');
 		    }
 		}, function(err) {
 			console.error('ERR', err);

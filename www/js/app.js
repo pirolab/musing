@@ -48,7 +48,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/login',
     views: {
       'menuContent': {
-        templateUrl: 'templates/login.html'
+        templateUrl: 'templates/login.html',
+		controller: 'loginCtrl'
       }
     }
   })
@@ -146,7 +147,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/concerti');
+  $urlRouterProvider.otherwise('/app/login');
 })
 .directive('dragBack', function($ionicGesture, $state) {
   return {
