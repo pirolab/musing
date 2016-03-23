@@ -1,7 +1,10 @@
 /* Empty. Add your own CSS if you like */
 
+.menu-content {border:none;-webkit-box-shadow: -5px 0px 11px 0px rgba(0, 0, 0, 0.23);-moz-box-shadow:-5px 0px 11px 0px rgba(0, 0, 0, 0.23);box-shadow:-5px 0px 11px 0px rgba(0, 0, 0, 0.23);}
+
+
 .scroll-bar-v {right: 2px;}
-.bar.bar-stable {border-color: transparent;background-color: #000;background-image:none; color: #FFF;}
+.bar.bar-stable {border:none;background-color: #000;background-image:none; color: #FFF;}
 .menu .bar-header {z-index: 11;background-color: #222;}
 .bar.bar-stable .title,
 .bar-stable .button.button-clear {color: #FFF; font-size:16px; text-transform:uppercase;}
