@@ -1,4 +1,4 @@
-controllersmodule.controller('loginCtrl', function($scope, $timeout, $ionicSideMenuDelegate, $state, User, Loader) {
+controllersmodule.controller('loginCtrl', function($scope, $timeout, $ionicHistory, $ionicSideMenuDelegate, $state, User, Loader) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -25,6 +25,10 @@ controllersmodule.controller('loginCtrl', function($scope, $timeout, $ionicSideM
 		      //$scope.userinfo = response.data;
 			  User.userdata = response.data;
 			  $scope.userinfo = User.userdata;
+				$ionicHistory.nextViewOptions({
+					disableAnimate: true,
+					disableBack: true
+				});			  
 			  $state.go('app.concerti');
 		    }
 		}, function(err) {

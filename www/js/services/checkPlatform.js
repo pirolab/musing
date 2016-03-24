@@ -12,6 +12,12 @@ servicesmodule.factory('platformCheck', function( $http ) {
 		},
 		isAndroid: function() {
 			return isAndroid;
+		},
+		currentPlatform: function() {
+			return currentPlatform;
+		},
+		currentPlatformVersion: function() {
+			return currentPlatformVersion;
 		}
 	};
 
