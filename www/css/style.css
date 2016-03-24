@@ -1,6 +1,11 @@
 /* Empty. Add your own CSS if you like */
 
-.menu-content {border:none;-webkit-box-shadow: -5px 0px 11px 0px rgba(0, 0, 0, 0.23);-moz-box-shadow:-5px 0px 11px 0px rgba(0, 0, 0, 0.23);box-shadow:-5px 0px 11px 0px rgba(0, 0, 0, 0.23);}
+.menu-content {
+	border:none !important;
+	-webkit-box-shadow: -5px 0px 11px 0px rgba(0, 0, 0, 0.23) !important;
+	-moz-box-shadow:-5px 0px 11px 0px rgba(0, 0, 0, 0.23) !important;
+	box-shadow:-5px 0px 11px 0px rgba(0, 0, 0, 0.23) !important;
+}
 
 
 .scroll-bar-v {right: 2px;}

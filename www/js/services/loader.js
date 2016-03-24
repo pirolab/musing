@@ -1,13 +1,13 @@
-servicesmodule.factory('Loader', function($http ,  $ionicLoading) {
+servicesmodule.factory('Loader', function($http ,  $ionicLoading, platformCheck) {
 	
 
 	var loadershow = function() {
-		if(currentPlatform === 'android'){
+		if(platformCheck.isAndroid()){
 			$ionicLoading.show({
 				noBackdrop: false,
 			  template: '<p class="item-icon-left">Un attimo!!<ion-spinner icon="android" class="spinner-royal"></ion-spinner></p>'
 			});
-		} else if(currentPlatform === 'ios'){
+		} else if(platformCheck.isIOS()){
 			$ionicLoading.show({
 				noBackdrop: false,
 			  template: '<p class="item-icon-left">Un attimo!!<ion-spinner icon="lines"></ion-spinner></p>'
