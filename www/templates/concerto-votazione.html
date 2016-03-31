@@ -1,3 +1,30 @@
 
     <h3>Votazione</h3>
+	
+
+	<div class="row">
+	  <div class="col">
+		<button class="tab-button" ng-click="tab = 1" ng-class="{'selected-tab': tab == 1}">Musicisti cand.</button>
+	  </div>
+	  <div class="col">
+		<button class="tab-button" ng-click="tab = 2" ng-class="{'selected-tab': tab == 2}">Le tue scelte</button>
+	  </div>
+	  <div class="col">
+		<button class="tab-button" ng-click="tab = 3" ng-class="{'selected-tab': tab == 3}">Follower partecipanti</button>
+	  </div>
+	</div>
+	
+	<div ng-if="tab == 1">
+		lista musicisti candidati per votazione
+	</div>
+	
+	<div ng-if="tab == 2">
+		scelte votazione
+	</div>
+	
+	<div ng-if="tab == 3">
+		lista follower partecipanti
+	</div>
+
+
 

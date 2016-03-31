@@ -115,6 +115,19 @@
 	background-color:#ff9a00;
 }
 
+.tab-button {
+	width: 100%;
+	text-align:center;
+	background: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: none;
+}
+
+.selected-tab {
+	border-bottom: 4px solid #ccc;
+}
+
 
 
 
